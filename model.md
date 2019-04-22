@@ -10,6 +10,13 @@
 -   Usar o metodo **create** para inserir algum registro no banco, porém preciso definir na model quais campos pode ser preenchido quando se é passado um array.  
 -   Criar a propriedade *protected* com o nome **$fillable** e passar o array dos campos que pode ser preenchido ou criar a **$guarded** e passar os campos que não podem ser preenchidos.  
     
+  ### FAZER SELECT  
+  > Table->all();
+  
+  > Table::select('name','surname')->where('id', 1)->get();
+  
+  > ModelName::find($id, ['name', 'surname']); *Segundo parametro é as colunas que irão aparecer*
+  
 
   ### FAZER UM UPDATE
 
@@ -23,6 +30,20 @@
 	>$teste = $this->product->find(5)->update(['aqui tera um array']);  
 	
 -   Caso o update nao for pelo *ID*, pode trocar o metodo **find** pelo **where('nomeDoCampo', ' <> *opcional*', 'Valor de comparação');**
+
+-   Segue abaixo um exemplo de update:
+
+	> public function update(Request $request){
+	>
+	> $produto = Produtos::find($request->id);
+	>
+	>$produto->fill($request->all());
+	>	
+	>$produto->save();
+	>
+	>return response()->json($produto); *Esse retorno é usado em caso de API*
+	>
+	>}
     
   ### FAZER UM DELETE  
 
