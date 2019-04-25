@@ -10,4 +10,6 @@
 * Instalação do laravel
 
 > https://hcnlinuxblog.wordpress.com/2018/05/02/instalando-o-laravel-php-framework-no-ubuntu-18-04-lts-para-o-apache/
+
 > http://marcosaccioly.com.br/blog/2015/11/utilizando-laravel-no-ubuntu-14-04/
+
