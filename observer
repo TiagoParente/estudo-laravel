@@ -1,0 +1,6 @@
+# OBSERVER
+
+ - Usado para executar alguma ação após uma ação na model.
+ - Funciona bem com as filas do Laravel.
+ - Métodos terminados em **ING** (Ex: Saveing), são executados antes da gravação no DB.
+ - Métodos terminado em **ED** (Ex: Save), são executados após a gravação no DB.
