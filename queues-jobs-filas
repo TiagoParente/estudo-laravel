@@ -1,0 +1,5 @@
+# QUEUES
+
+ - Rodar comando para criar tabela no DB.
+ - Rodar comando Artisan para criar um novo JOB.
+ - **Definição:** São filas para processamento demorados, não deixando o usuário travado na tela, ele roda em segundo plano.
